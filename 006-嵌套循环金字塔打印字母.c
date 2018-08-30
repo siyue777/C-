@@ -2,24 +2,23 @@
 
 int main(void)
 {	
-	const cn='A';
-	char ch,start;
-	printf("请输入大写字母¸\n");       // 根据用户输入的大写字母打印结果
-	scanf("%c",&ch);
-	int i,n,a,b,j;                   // int i,j，n; 内层不用每组循环使用不同变量
-	n=ch-cn;
-	for(i=0;i<=n;i++)
-	{	
-		for(a=i;a<n;a++)
-			printf(" ");
-		for(start=cn,b=0;b<=i;b++)     //循环条件太过繁琐
-			printf("%c",start++);	
-		for	(start-=2,j=0;j<i;j++)
-			printf("%c",start--);
-		printf("\n");
-	}
-  
-	return 0;	
+    const cn='A';
+    char ch,start;
+    printf("请输入大写字母¸\n");       // 根据用户输入的大写字母打印结果
+    scanf("%c",&ch);
+    int i,n,a,b,j;                   // int i,j，n; 内层不用每组循环使用不同变量
+    n=ch-cn;
+    for(i=0;i<=n;i++)
+    {	
+        for(a=i;a<n;a++)
+	printf(" ");
+	for(start=cn,b=0;b<=i;b++)    // 循环条件太过繁琐
+	printf("%c",start++);	
+	for(start-=2,j=0;j<i;j++)
+	printf("%c",start--);
+	printf("\n");
+    }
+    return 0;	
 }
 
 修改后：
