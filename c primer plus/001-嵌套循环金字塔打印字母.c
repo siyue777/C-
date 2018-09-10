@@ -4,7 +4,7 @@ int main(void)
 {	
     const cn='A';
     char ch,start;
-    printf("请输入大写字母¸\n");       // 根据用户输入的大写字母打印结果
+    printf("请输入大写字母:\n");       // 根据用户输入的大写字母打印结果
     scanf("%c",&ch);
     int i,n,a,b,j;                   // int i,j，n; 内层不用每组循环使用不同变量
     n=ch-cn;
