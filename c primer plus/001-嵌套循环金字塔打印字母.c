@@ -1,4 +1,14 @@
-#include<stdio.h>
+/*
+C primer plus第六章循环习题第五题：
+提示用户输入大写字母使用循环嵌套按金字塔格式打印字母
+    A
+   ABA
+  ABCBA
+ ABCDCBA
+ABCDEDCBA
+根据用户输入的字母决定，上图为输入字母E的结果。
+*/
+#include<stdio.h> //第一次写的代码
 
 int main(void)
 {	
@@ -21,4 +31,4 @@ int main(void)
     return 0;	
 }
 
-修改后：
+第二次修改后：
