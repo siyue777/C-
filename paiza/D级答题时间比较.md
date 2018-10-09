@@ -26,13 +26,11 @@
       <td></td>
     </tr>
     <tr>
-    	<td bgcolor="LightCoral">010</td>
-    	<td bgcolor="LightCoral">14分1秒</td>
+    	<td bgcolor=#7FFFD4>010</td>
+    	<td>14分1秒</td>
     	<td>4分11秒</td>
     	<td>100</td>
     	<td>字符串</td>
       <td></td>
     </tr>
 </table>  
-
-    
