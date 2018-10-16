@@ -43,13 +43,13 @@ int main(void)
     
     for(a=0;a<=n;a++)               //外层循环，循环打印多少行数 
     {
-        for(b=0;b<n-a;b++)          //内层循环1，打印空格 
+        for(b=a;b<=n;b++)          //内层循环1，打印空格 
             printf(" "); 
-	    
-	for(b=0,cn='A';b<=a;b++)    //内层循环2，升序打印字母 
+	
+        for(b=0,cn='A';b<=a;b++)    //内层循环2，升序打印字母 
             printf("%c",cn++);	
-	    
-	for(b=0,cn-=2;b<a;b++)      //内层循环3，降序打印字母 
+
+        for(b=0,cn-=2;b<a;b++)      //内层循环3，降序打印字母 
 	    printf("%c",cn--);
 	    
 	printf("\n"); 
