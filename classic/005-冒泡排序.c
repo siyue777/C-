@@ -2,7 +2,7 @@
 #include <stdio.h>
 int main(void)
 {
-    int n;    //输入n个数
+    int n;   		//输入n个数
     int a;
     int i,j;
     int max;
@@ -13,10 +13,10 @@ int main(void)
     }
     for(i=0;i<n-1;i++){          //n个数需要比对n-1次
         for(j=i+1;j<n;j++){      
-            if(num[i]<num[j]){     //如果后一项比前一项大，则交换位置
+            if(num[i]<num[j]){   //如果后一项比前一项大，则交换位置
                 max=num[j];
                 num[j]=num[i];
-		num[i]=max;
+                num[i]=max;
 	    }
 	}
     }
