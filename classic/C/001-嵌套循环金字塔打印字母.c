@@ -8,7 +8,7 @@ C primer plus第六章循环习题第五题：
 ABCDEDCBA
 根据用户输入的字母决定，上图为输入字母E的结果。
 */
-#include<stdio.h> //第一次写的代码
+#include<stdio.h> //第一次写的代码,没有注意空格
 int main(void)
 {	
     const cn='A';
@@ -30,29 +30,30 @@ int main(void)
     return 0;	
 }
 
-第二次修改后：
+//第二次修改后：
 #include<stdio.h> 
 int main(void)
 {	
     char ch;
-    char cn='A';
-    printf("请输入大写字母:\n");       // 根据用户输入的大写字母打印结果
-    scanf("%c",&ch);
-    int a,b,n;			    //n为输入字母和A的差值，a为外层循环变量，b为内层循环变量
-    n=ch-cn;
+    char cn = 'A';
+    printf("请输入大写字母:\n");       //根据用户输入的大写字母打印结果
+    scanf("%c", &ch);
+    int a, b, n;			    //n为输入字母和A的差值，a为外层循环变量，b为内层循环变量
+    n = ch - cn;
     
-    for(a=0;a<=n;a++)               //外层循环，循环打印多少行数 
+    for (a = 0; a <= n; a++)               //外层循环，循环打印多少行数 
     {
-        for(b=a;b<=n;b++)          //内层循环1，打印空格 
+        for (b = a; b <= n; b++)          //内层循环1，打印空格 
             printf(" "); 
 	
-        for(b=0,cn='A';b<=a;b++)    //内层循环2，升序打印字母 
-            printf("%c",cn++);	
+        for (b = 0, cn = 'A'; b <= a; b++)    //内层循环2，升序打印字母 
+            printf("%c", cn++);	
 
-        for(b=0,cn-=2;b<a;b++)      //内层循环3，降序打印字母 
-	    printf("%c",cn--);
+        for (b = 0, cn -= 2; b < a; b++)      //内层循环3，降序打印字母 
+	    printf("%c", cn--);
 	    
 	printf("\n"); 
     }
     return 0;	
 }
+
