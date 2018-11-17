@@ -10,24 +10,24 @@ int main()
 {
     char ch1[100];
     char ch2[100];
-    int a=0;          //主串下标 
-    int b=0;          //子串下标 
-    scanf("%s %s",ch1,ch2);
+    int a = 0;          //主串下标 
+    int b = 0;          //子串下标 
+    scanf("%s %s", ch1, ch2);
     
-    while(a<strlen(ch1)&&b<strlen(ch2))  //增加b<strlen（ch2）的判断条件这样每次判断循环的区段长度就为子串长度
+    while (a < strlen(ch1) && b < strlen(ch2))  //增加b<strlen（ch2）的判断条件这样每次判断循环的区段长度就为子串长度
     {
-    	if(ch1[a]==ch2[b]) //如果相等，匹配下一个字符 
+    	if (ch1[a] == ch2[b]) //如果相等，匹配下一个字符 
     	{
     	    a++;
 	    b++;
 	}
     	else              //如果不相等，子串下标清空，主串下标回退到匹配前的下一个字符 
     	{
-    	    a=a-b+1;
-    	    b=0;
+    	    a = a - b + 1;
+    	    b = 0;
 	}
     }
-    printf("%d",a-strlen(ch2)+1);  //循环结束后获取第一次出现下标 
+    printf("%d", a - strlen(ch2) + 1);  //循环结束后获取第一次出现下标 
     return 0;    	
 }
 /* 不少的题解使用了strstr函数
