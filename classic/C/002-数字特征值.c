@@ -35,28 +35,28 @@
 
 int main()
 {
-	int a=0;//输入的整数
-	int b=10;
-	int c=0;//拆分取数
-	int n=1;//位数
-	int d=1;//二进制位值
-	int sum=0;//二进制总和
-	scanf("%d",&a);
+	int a = 0;//输入的整数
+	int b = 10;
+	int c = 0;//拆分取数
+	int n = 1;//位数
+	int d = 1;//二进制位值
+	int sum = 0;//二进制总和
+	scanf("%d", &a);
 	do {
-		c=a%b;
+		c = a % b;
 		
-		if ((c+n)%2 ==0){
-			sum=sum+d;
+		if ((c + n) % 2 == 0){
+			sum = sum + d;
 		}
 		else {
-			sum=sum;
+			sum = sum;
 		}
-		n++;
-		d=d*2;
-		a=a/b;
-	}	while(a>0);
+		n ++;
+		d = d * 2;
+		a = a / b;
+	}	while( a > 0);
 	
-	printf("%d",sum);
+	printf("%d", sum);
 	
 	return 0;		
 	
