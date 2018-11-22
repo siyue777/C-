@@ -40,14 +40,14 @@ int main(void){
     }       //得到和人名数组匹配的金额数组
 
     for (i = 0; i < n - 1; i++){       //对金额数组进行冒泡排序，循环n-1次
-        for (j = i; j < n; j++){
-            if (money[i] < money[i+1]){
-                price = money[i];
-                strcpy(book, name[i]);  //交换字符串变量，把后一项赋值给前项
-                money[i] = money[i+1];
-                strcpy(name[i], name[i+1]);
-                money[i+1] = price;
-                strcpy(name[i+1], book);
+        for (j = 0; j < n - 1; j++){
+            if (money[j] < money[j+1]){
+                price = money[j];
+                strcpy(book, name[j]);  //交换字符串变量，把后一项赋值给前项
+                money[j] = money[j+1];
+                strcpy(name[j], name[j+1]);
+                money[j+1] = price;
+                strcpy(name[j+1], book);
             }
         }
     }
