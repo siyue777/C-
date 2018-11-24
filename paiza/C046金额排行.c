@@ -56,3 +56,51 @@ int main(void){
     }
     return 0;
 }
+
+//用相同的方法换成结构数组
+#include <stdio.h>
+#include <string.h>
+struct read
+{
+    char name[20];
+    int money;   
+};                //定义一个结构
+int main(void){
+    int n, m;
+    scanf("%d", &n);   //输入人名个数
+    char people[20]; //临时储存人名变量
+    int price;    //临时储存金额变量
+    int i, j; //外层和内层循环变量
+    struct read list[n];   //定义结构数组
+    for (i = 0; i < n; i++){
+        scanf("%s", list[i].name); //注意！调用结构数组中的数据时[i]跟在数组名list后面而不是变量name后面
+    }
+    for (i = 0; i < n; i++){  //金额数组初始化为零
+        list[i].money = 0;
+    }
+    scanf("%d", &m);        //输入金额输入次数
+    for (i = 0; i < m; i++){         
+        scanf("%s %d", people, &price);
+        for (j = 0; j < n; j++){
+            if (strcmp(people, list[j].name) == 0) //找到对应人名，进行金额累加
+                list[j].money += price; 
+        }
+    }       //得到和人名数组匹配的金额数组
+
+    for (i = 0; i < n - 1; i++){       //对金额数组进行冒泡排序，循环n-1次
+        for (j = 0; j < n - 1; j++){
+            if (list[j].money < list[j+1].money){
+                price = list[j].money;
+                strcpy(people, list[j].name);  //交换字符串变量，把后一项赋值给前项
+                list[j].money = list[j+1].money;
+                strcpy(list[j].name, list[j+1].name);
+                list[j+1].money = price;
+                strcpy(list[j+1].name, people);
+            }
+        }
+    }
+    for (i = 0; i < n; i++){
+        printf("%s\n", list[i].name);
+    }
+    return 0;
+}
