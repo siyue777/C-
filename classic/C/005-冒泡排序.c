@@ -11,8 +11,8 @@ int main(void)
     for(a = 0; a < n; a++){
         scanf("%d", &num[a]);    
     }
-    for (i = 0; i < n-1; i++){          //n个数需要比对n-1次
-        for (j = i+1; j < n; j++){      
+    for (i = 0; i < n - 1; i++){          //n个数需要比对n-1次
+        for (j = 0; j < n - 1 - i; j++){   //-i是因为内循环执行一次后最小的数就在最后一个，下次循环不用再循环到最后一个  
             if (num[i] < num[j]){   //如果后一项比前一项大，则交换位置
                 max = num[j];
                 num[j] = num[i];
