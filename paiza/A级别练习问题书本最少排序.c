@@ -22,11 +22,11 @@ int main(void){
     int flag = 0;
     for (a = 0; a < n;){
         if(num[a] != a + 1){   //调换序列
-    		int  p = num[a];     //中间数p
-    		int mid = num[p - 1];
-    		num[p - 1] = num[a];
-    		num[a] = mid;
-    		flag ++;
+    	    int  p = num[a];     //中间数p
+    	    int mid = num[p - 1];
+    	    num[p - 1] = num[a];
+    	    num[a] = mid;
+    	    flag ++;
         }
         else
             a ++;
